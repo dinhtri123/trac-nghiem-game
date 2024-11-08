@@ -1,0 +1,15 @@
+.profile-inner {
+    padding: 24px 0px;
+    max-width: 90%;
+    display: flex;
+    gap: 40px;
+}
+.profile-navbar {
+    flex-basis: 40%;
+}
+.profile-content {
+    flex-basis: 60%;
+}
+.profile-breadcrumb {
+    
+}

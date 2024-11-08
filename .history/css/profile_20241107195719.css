@@ -1,0 +1,43 @@
+.profile-inner {
+    padding: 24px 0px;
+    max-width: 90%;
+    display: flex;
+    gap: 40px;
+    font-family: var(--font-secondary);
+}
+.profile-navbar {
+    flex-basis: 40%;
+}
+.profile-content {
+    flex-basis: 60%;
+}
+.profile-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cl-black);
+    margin-bottom: 32px;
+}
+.profile-breadcrumb span {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 600;
+}
+.navbar li{
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.navbar li.active *, .navbar li:hover *{
+    color: var(--cl-primary);
+}

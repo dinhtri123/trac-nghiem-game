@@ -1,0 +1,15 @@
+.hero {
+    min-width: 1442px;
+    width: 100%;
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.hero-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.hero-list li {
+    position: relative;
+    font-size: ;
+}

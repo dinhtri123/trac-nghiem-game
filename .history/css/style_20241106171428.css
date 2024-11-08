@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/SFProDisplay-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/SFProDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/SFProDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/SFProDisplay-SemiboldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+:root {
+    --cl-primary: #F27125;
+    --cl-secondary: #FAD156;
+    --cl-black: #000;
+    --cl-white: #fff;
+    --font-primary: 'SF Pro Display', sans-serif;
+    --font-secondary: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.2;
+}
+.container {
+    max-width: 1390px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    outline: none;
+    border: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* -----header----- */
+header {
+    background-color: var(--cl-white);
+}
+.header-inner {
+    padding: 15px 0px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo img {
+    max-width: 117px;
+}
+.header-right {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.header-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.header-menu ul li a {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    color: var(--cl-black);
+}

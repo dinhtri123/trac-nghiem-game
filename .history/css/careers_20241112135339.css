@@ -1,0 +1,39 @@
+.careers-banner img {
+    width: 100%;
+}
+.banner-content {
+    padding: 107px 0px 67px;
+    font-family: var(--font-primary)
+}
+.banner-content > div {
+    text-align: center;
+}
+.banner-content h2 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 16px;
+}
+.banner-content p {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -1.2;
+    margin-bottom: 32px;
+}
+.careers-btn {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--cl-black);
+    padding: 16px 30px;
+    border-radius: 40px;
+}
+.banner-content .careers-btn {
+    background-color: var(--cl-secondary);
+}

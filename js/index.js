@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const btnMenu = document.querySelector(".header-icon-menu");
   const btnCloseMenu = document.querySelector(".header-btn-close");
@@ -11,7 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
     headerMenu.classList.remove("active");
   });
   const homePage = document.querySelector(".homepage");
-  if(homePage) {
+  if (homePage) {
+    AOS.init({
+      disable: false,
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+      offset: 120,
+      delay: 0,
+      duration: 1500,
+      easing: "ease",
+      once: false,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+    });
     // popup
     const popupRegister = document.querySelector(".popup-register");
     const popupLogin = document.querySelector(".popup-login");
@@ -31,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnCloseLogin.addEventListener("click", function () {
       popupLogin.classList.remove("active");
     });
-  
+
     // profile
     const media = window.matchMedia("(min-width: 769px)");
     const profile = document.querySelector("#profile");
@@ -60,24 +79,45 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
       } else {
-        navbarItem.map((item,i,arr) => {
-          item.addEventListener('click', function() {
-            arr.forEach(itemChild => {
+        navbarItem.map((item, i, arr) => {
+          item.addEventListener("click", function () {
+            arr.forEach((itemChild) => {
               itemChild.classList.remove("active");
-            })
-            item.classList.add('active')
-          })
-        })
+            });
+            item.classList.add("active");
+          });
+        });
       }
     }
   }
 
   // careers
-  const careers = document.querySelector('.careers');
-  if(careers) {
+  const careers = document.querySelector(".careers");
+  if (careers) {
     const percent = document.querySelector(".excercise-progress .percent");
-    const progressBg = document.querySelector(".excercise-progress .progress-bg");
-    const percentvalue = percent.textContent;
-    progressBg.style.width = `${percentvalue}`;
+    const progressBg = document.querySelector(
+      ".excercise-progress .progress-bg"
+    );
+    if(percent) {
+      const percentvalue = percent.textContent;
+      progressBg.style.width = `${percentvalue}`;
+    }
+    
+    const btnMore = Array.from(document.querySelectorAll(".btn-more button"));
+    
+    btnMore.map(item => {
+      item.addEventListener("click", function () {
+        const exploreItemContent = item.parentNode.parentNode;
+        if(item.textContent == "Thu gọn") {
+          item.textContent = "Xem thêm"
+          exploreItemContent.style.maxHeight = '145px'
+        }else {
+          item.textContent = "Thu gọn"
+          exploreItemContent.style.maxHeight = '100%'
+
+        }
+        
+      })
+    })
   }
 });

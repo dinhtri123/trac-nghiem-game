@@ -72,6 +72,7 @@
   background: #ffd6bd;
   border-radius: 24px;
   padding: 14px 24px 28px;
+  height: fit-content;
 }
 .explore-item-img {
   margin-bottom: 30px;
@@ -95,6 +96,26 @@
 }
 .expore-item-content {
   margin-top: 24px;
+  max-height: 145px;
+  overflow: hidden;
+  position: relative;
+}
+.btn-more {
+  width: 100%;
+  background-color: #ffd6bd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.btn-more button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--cl-primary);
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
 }
 .expore-item-content p,
 .expore-item-content ul li {

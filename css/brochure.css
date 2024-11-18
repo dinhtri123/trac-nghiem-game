@@ -1,0 +1,100 @@
+.brochure {
+    background-image: url('../images/brochure.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 30px 0px 40px;
+}
+.brochure-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.brochure-btn {
+    background-color: var(--cl-primary);
+    border-radius: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 24px;
+    color: var(--cl-white)
+}
+.brochure-logo {
+    width: 164px;
+    min-height: 56px;
+}
+.brochure-logo img {
+    width: 100%;
+}
+.brochure-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 43px;
+}
+.brochure-item {
+    padding: 32px 70px;
+}
+.brochure-item h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--cl-primary);
+    text-transform: uppercase;
+    margin-bottom: 42px;
+    font-family: var(--font-secondary);
+}
+.brochure-content .file, .brochure-item {
+    max-width: 640px;
+    width: 100%;
+    margin: 0px auto;
+    height: 907px;
+    display: inline-block;
+    background-color: var(--cl-white);
+    border-radius: 16px;
+    overflow-y: auto;
+}
+.brochure-content .file.active {
+    max-width: 100%;
+}
+.brochure-item-list li a {
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: var(--cl-primary);
+    color: var(--cl-white);
+    min-height: 64px;
+    padding: 5px 10px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .brochure-logo {
+        width: 130px;
+        min-height: 100%;
+    }
+    .brochure-item {
+        padding: 16px;
+        height: 100%;
+    }
+    .brochure-item h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    .brochure-item-list li a {
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 50px;
+        margin-bottom: 16px;
+    }
+    .brochure-content .file {
+        height: 450px;
+    }
+}

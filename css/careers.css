@@ -99,6 +99,7 @@
   max-height: 145px;
   overflow: hidden;
   position: relative;
+  padding-bottom: 30px;
 }
 .btn-more {
   width: 100%;

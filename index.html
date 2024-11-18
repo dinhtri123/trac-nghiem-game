@@ -109,16 +109,20 @@
             <div class="test">
                 <p class="title">TRẮC NGHIỆM NGHỀ NGHIỆP</p>
                 <div class="test-item" data-aos="fade-right">
-                    <h3 class="stroke-outline">
-                        <b class="stroke">KHÁM PHÁ SỞ THÍCH NGHỀ NGHIỆP</b>
-                        <b class="stroke-clone">KHÁM PHÁ SỞ THÍCH NGHỀ NGHIỆP</b>
+                    <span class="test-img">
+                        <img src="./images/test-img.svg" alt="">
+                    </span>
+                    <h3>
+                        KHÁM PHÁ SỞ THÍCH<br><strong>NGHỀ NGHIỆP</strong>
                     </h3>
                     <button>LÀM TRẮC NGHIỆM NGAY</button>
                 </div>
                 <div class="test-item" data-aos="fade-left">
-                    <h3 class="stroke-outline">
-                        <b class="stroke">KHÁM PHÁ SỞ THÍCH, TÍCH CÁCH</b>
-                        <b class="stroke-clone">KHÁM PHÁ SỞ THÍCH, TÍCH CÁCH</b>
+                    <span class="test-img">
+                        <img src="./images/test-img2.svg" alt="">
+                    </span>
+                    <h3>
+                        KHÁM PHÁ SỞ THÍCH,<br><strong>TÍCH CÁCH</strong>
                     </h3>
                     <button>LÀM TRẮC NGHIỆM NGAY</button>
                 </div>
@@ -131,6 +135,12 @@
                     <!-- Swiper -->
                     <div class="swiper mySwiper game-swiper">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="game-item">
+                                    <img src="./images/box-img.svg" alt="" class="md">
+                                    <img src="./images/box-img-mb.svg" alt="" class="sm">
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="game-item">
                                     <div class="game-item-content" data-aos="fade-right">
@@ -188,8 +198,26 @@
             <div class="box-inner">
                 <p class="title">VÒNG QUAY MAY MẮN</p>
                 <div class="container">
-                    <img src="./images/lucky-img.svg" class="box-img md" alt="">
-                    <img src="./images/lucky-img-mb.png" class="box-img sm" alt="">
+                    <span class="lucky-bg">
+                        <img src="./images/vòng quay fpt nền-01 1.png" class="box-img md" alt="">
+                        <img src="./images/lucky-img-mb.png" class="box-img sm" alt="">
+                    </span>
+                    <div class="lucky-gif">
+                        <span class="gif-arrow">
+                            <img src="./images/lucky-gif-arrow.png" alt="">
+                        </span>
+                        <div class="gif-list">
+                            <span class="gif-list-btn">
+                                <img src="./images/QUAY.png" alt="">
+                            </span>
+                            <span class="gif-list-bg">
+                                <img src="./images/lucky-bg.svg" alt="">
+                            </span>
+                        </div>
+                        <span class="gif-bottom">
+                            <img src="./images/lucky-bottom.png" alt="">
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,7 +231,7 @@
                                 <b class="stroke">Giải đáp 24/7 tất tần tật các thông tin mà 2K7 cần Bee Al đều cung cấp được hết</b>
                                 <b class="stroke-clone">Giải đáp 24/7 tất tần tật các thông tin mà 2K7 cần Bee Al đều cung cấp được hết</b>
                             </h3>   
-                            <button>LÀM TRẮC NGHIỆM NGAY</button>
+                            <button>ALO BEE AI NGHE BẠN</button>
                         </div>
                     </div>
                     <div class="bee-img">
@@ -410,6 +438,10 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".game-swiper", {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -420,6 +452,7 @@
             },
         });
     </script>
+    <script src="./js/aos.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

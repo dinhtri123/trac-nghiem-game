@@ -51,7 +51,7 @@ img {
   object-fit: cover;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .sm {
   display: none !important;

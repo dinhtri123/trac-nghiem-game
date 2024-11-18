@@ -13,24 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const homePage = document.querySelector(".homepage");
   if (homePage) {
-    AOS.init({
-      disable: false,
-      startEvent: "DOMContentLoaded",
-      initClassName: "aos-init",
-      animatedClassName: "aos-animate",
-      useClassNames: false,
-      disableMutationObserver: false,
-      debounceDelay: 50,
-      throttleDelay: 99,
-
-      offset: 120,
-      delay: 0,
-      duration: 1500,
-      easing: "ease",
-      once: false,
-      mirror: false,
-      anchorPlacement: "top-bottom",
-    });
     // popup
     const popupRegister = document.querySelector(".popup-register");
     const popupLogin = document.querySelector(".popup-login");
@@ -50,6 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     btnCloseLogin.addEventListener("click", function () {
       popupLogin.classList.remove("active");
     });
+
+
+    // vongquay
+    const lucky = document.querySelector("#lucky");
+    if(lucky) {
+      const btnSpin = document.querySelector(".gif-list-btn");
+      const gif = document.querySelector(".gif-list-bg");
+      btnSpin.addEventListener('click', function() {
+        gif.classList.add('active')
+      })
+    }
 
     // profile
     const media = window.matchMedia("(min-width: 769px)");
@@ -119,5 +112,26 @@ document.addEventListener("DOMContentLoaded", function () {
         
       })
     })
+  }
+
+  // brochure
+  const brochure = document.querySelector(".brochure");
+  if(brochure) {
+    const brochureItem = document.querySelector(".brochure-item");
+    const brochureListItem = Array.from(
+      document.querySelectorAll(".brochure-item-list li a")
+    );
+    const file = document.querySelector(".brochure .file");
+    brochureListItem.map((item) => {
+      item.addEventListener("click", function () {
+        brochureItem.classList.add("hidden");
+        file.classList.remove('hidden')
+      });
+    });
+    file.addEventListener('click', handleClick);
+    function handleClick () {
+      file.classList.add('active');
+      file.removeEventListener("click", handleClick);
+    }
   }
 });

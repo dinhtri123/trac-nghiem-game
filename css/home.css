@@ -47,6 +47,15 @@
 }
 .map-list li {
   position: relative;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .map-list li p {
 background-repeat: no-repeat;
@@ -177,9 +186,14 @@ background-repeat: no-repeat;
   background-image: url("../images/hero-test-item-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 40px;
+  padding: 20px 40px 32px;
   max-width: 445px;
   min-height: 248px;
+  text-align: center;
+}
+.test-img {
+  display: block;
+  margin-bottom: 20px;
 }
 .test-item h3 {
   font-size: 30px;
@@ -191,6 +205,11 @@ background-repeat: no-repeat;
   text-align: center;
   margin-bottom: 24px;
   font-weight: 900;
+}
+.test-item h3 strong {
+  color: #ffec03;
+  font-weight: 900;
+  font-style: italic;
 }
 .test-item button {
   border-radius: 24px;
@@ -277,6 +296,7 @@ background-repeat: no-repeat;
 }
 .box-img {
   border-radius: 24px;
+  width: 100%;
 }
 .bee-inner {
   max-width: 1200px;
@@ -319,6 +339,56 @@ background-repeat: no-repeat;
 .bee-img img {
   transform: scale(1.2);
 }
+#lucky .lucky-gif {
+  position: absolute;
+  right: 90px;
+  bottom: 40px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+        transform: translateY(95px);
+}
+.gif-arrow {
+  transform: translateY(40px);
+    z-index: 20;
+}
+#lucky .container {
+  position: relative;
+}
+.gif-list .gif-list-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  z-index: 10;
+}
+.gif-list .gif-list-bg.active img {
+  animation: vongquay 4s ease;
+  transform: rotate(375deg);
+}
+@keyframes vongquay {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(375deg);
+  }
+}
+.gif-list {
+  z-index: 10;
+}
+.gif-bottom {
+  transform: translateY(-95px);
+}
+
+@media  screen and (max-width: 1366px) {
+  #lucky .lucky-gif {
+    right: 60px;
+    bottom: 0;
+    transform: translateY(95px) scale(0.9);
+  }
+}
 
 @media screen and (max-width: 1260px) {
   .map-list {
@@ -331,6 +401,11 @@ background-repeat: no-repeat;
   }
   .map-list li p {
     transform: translate(0, 0) !important;
+  }
+  #lucky .lucky-gif {
+    right: 0px;
+    bottom: 0;
+    transform: translateY(95px) scale(0.7);
   }
 }
 @media screen and (max-width: 840px) {
@@ -345,6 +420,11 @@ background-repeat: no-repeat;
   .bee-wrapper {
     flex-direction: column;
   }
+      #lucky .lucky-gif {
+        right: -50px;
+        bottom: -90px;
+        transform: translateY(95px) scale(0.5);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -408,8 +488,9 @@ background-repeat: no-repeat;
     display: none;
   }
   .test-item {
-    padding: 30px 35px;
+    padding: 13px 35px 20px;
     min-height: 100%;
+    width: 100%;
   }
   .test-item h3 b, .bee-content .test-item h3 b{
     font-size: 18px;
@@ -484,7 +565,7 @@ background-repeat: no-repeat;
     margin-bottom: 20px;
   }
   .game-item-content button {
-    max-width: 222px;
+    width: 100%;
     min-height: 40px;
     font-size: 14px;
     font-weight: 700;
@@ -496,7 +577,23 @@ background-repeat: no-repeat;
   .game-img img {
     border-radius: 6px;
   }
+  .test-item h3 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  .test-img {
+    margin-bottom: 10px;
+  }
+  .test-img img{
+    width: 32px;
+  }
   #lucky .container {
     padding: 0;
   }
+     #lucky .lucky-gif {
+        right: 0;
+        bottom: -60px;
+        transform: translateY(95px) scale(0.6);
+    }
 }

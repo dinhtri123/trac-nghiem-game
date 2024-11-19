@@ -274,6 +274,7 @@
   overflow: hidden;
 }
 .excercise-progress .progress-bg {
+  transition: all 0.3s ease;
   position: absolute;
   border-radius: 50px;
   height: 100%;
@@ -659,8 +660,8 @@
     flex-direction: column;
   }
   .banner-content {
-    padding: 20px 0px;
-    background-position: top right;
+    padding: 50px 0px 20px;
+    background-position: bottom;
   }
   .careers-title {
     font-size: 22px;

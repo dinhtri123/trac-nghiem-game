@@ -47,7 +47,7 @@
 }
 .map-list li {
   position: relative;
-  animation: bounce 2s infinite;
+  animation: bounce 3s infinite;
 }
 @keyframes bounce {
   0%, 100% {
@@ -245,6 +245,9 @@ background-repeat: no-repeat;
 }
 .game-item-content {
   flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .game-item-content h3 {
   font-size: 36px;
@@ -265,7 +268,6 @@ background-repeat: no-repeat;
   line-height: 28px;
   color: var(--cl-white);
   padding: 10px 20px;
-  max-width: 340px;
   min-height: 64px;
   width: 100%;
   border-radius: 32px;
@@ -591,9 +593,12 @@ background-repeat: no-repeat;
   #lucky .container {
     padding: 0;
   }
-     #lucky .lucky-gif {
-        right: 0;
-        bottom: -60px;
-        transform: translateY(95px) scale(0.6);
-    }
+    #lucky .lucky-gif {
+      right: 0;
+      bottom: -60px;
+      transform: translateY(95px) scale(0.6);
+  }
+  .stroke-clone {
+    -webkit-text-stroke: 2.5px var(--cl-primary);
+  }
 }

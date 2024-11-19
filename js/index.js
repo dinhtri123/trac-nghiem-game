@@ -87,15 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // careers
   const careers = document.querySelector(".careers");
   if (careers) {
-    const percent = document.querySelector(".excercise-progress .percent");
-    const progressBg = document.querySelector(
-      ".excercise-progress .progress-bg"
-    );
-    if(percent) {
-      const percentvalue = percent.textContent;
-      progressBg.style.width = `${percentvalue}`;
-    }
-    
     const btnMore = Array.from(document.querySelectorAll(".btn-more button"));
     
     btnMore.map(item => {
@@ -132,6 +123,33 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleClick () {
       file.classList.add('active');
       file.removeEventListener("click", handleClick);
+    }
+  }
+
+  // excercise
+  const excercise = document.querySelector("#excercise");
+  if(excercise){
+    const percent = document.querySelector(".excercise-progress .percent");
+    const progressBg = document.querySelector(
+      ".excercise-progress .progress-bg"
+    );
+    const radio = Array.from(
+      document.querySelectorAll(".excercise-item-option label input[type='radio']")
+    );
+    
+    radio.forEach((item) => {
+      item.addEventListener("change", updateProgress);
+    });
+    const totalItems = radio.length;
+    function updateProgress () {
+      let selectedCount = new Set(
+        radio.filter((radio) => radio.checked).map((radio) => radio.name)
+      ).size;
+
+      let percentage = Math.round((selectedCount / totalItems) * 100);
+
+      percent.textContent = `${percentage* 2}%`;
+      progressBg.style.width = `${percentage * 2}%`;
     }
   }
 });

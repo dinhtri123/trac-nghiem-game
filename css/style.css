@@ -323,7 +323,11 @@ footer {
   font-weight: 500;
   font-style: italic;
   color: var(--cl-white);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+}
+p.popup-redirect {
+  margin-bottom: 0px;
+  cursor: pointer;
 }
 .popup-wrapper button {
   width: 100%;

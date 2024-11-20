@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const btnMenu = document.querySelector(".header-icon-menu");
   const btnCloseMenu = document.querySelector(".header-btn-close");
@@ -18,30 +17,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupLogin = document.querySelector(".popup-login");
     const btnCloseRegister = popupRegister.querySelector(".popup-btn-close");
     const btnCloseLogin = popupLogin.querySelector(".popup-btn-close");
-    const btnRegister = document.querySelector(".btn-register");
-    const btnLogin = document.querySelector(".btn-login");
-    btnRegister.addEventListener("click", function () {
-      popupRegister.classList.add("active");
-    });
+    const btnRegister = Array.from(document.querySelectorAll(".btn-register"));
+    const btnLogin = Array.from(document.querySelectorAll(".btn-login"));
+    btnRegister.map(item => {
+      item.addEventListener("click", function () {
+        popupRegister.classList.add("active");
+        popupLogin.classList.remove("active");
+      });
+    })
     btnCloseRegister.addEventListener("click", function () {
       popupRegister.classList.remove("active");
     });
-    btnLogin.addEventListener("click", function () {
-      popupLogin.classList.add("active");
-    });
+    btnLogin.map(item => {
+      item.addEventListener("click", function () {
+        popupLogin.classList.add("active");
+        popupRegister.classList.remove("active");
+      });
+    })
     btnCloseLogin.addEventListener("click", function () {
       popupLogin.classList.remove("active");
     });
-
+    // check login
+    const headerBtn = document.querySelector(".header-btn");
+    const notLogged = Array.from(document.querySelectorAll(".not-logged"));
+    notLogged.map((item) => {
+      item.addEventListener("click", function (e) {
+        if (headerBtn.classList.contains("header-btn-action")) {
+          e.preventDefault();
+          popupLogin.classList.add("active");
+        }
+      });
+    });
 
     // vongquay
     const lucky = document.querySelector("#lucky");
-    if(lucky) {
+    if (lucky) {
       const btnSpin = document.querySelector(".gif-list-btn");
       const gif = document.querySelector(".gif-list-bg");
-      btnSpin.addEventListener('click', function() {
-        gif.classList.add('active')
-      })
+      btnSpin.addEventListener("click", function () {
+        gif.classList.add("active");
+      });
     }
 
     // profile

@@ -52,12 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // vongquay
     const lucky = document.querySelector("#lucky");
+    const popupSuc = document.querySelector(".popup-successfully");
     if (lucky) {
       const btnSpin = document.querySelector(".gif-list-btn");
       const gif = document.querySelector(".gif-list-bg");
       btnSpin.addEventListener("click", function () {
         gif.classList.add("active");
-      });
+        setTimeout(() => {
+          popupSuc.classList.add('active')
+        }, 4000)
+      })
     }
 
     // profile

@@ -341,6 +341,57 @@ p.popup-redirect {
   cursor: pointer;
 }
 
+
+/* popup-game */
+.popup-game .popup-inner {
+  min-height: 565px;
+  background-color: transparent;
+  overflow: hidden;
+}
+.popup-game .bg {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.popup-game .bg img {
+  height: 100%;
+}
+.popup-logo {
+  display: flex;
+  justify-content: center;
+}
+.popup-game .img {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.popup-game h3 {
+  color: #FFF7DE;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+  text-shadow: 1px 1px 3px #FFFC017D;
+}
+.popup-game button {
+  margin-top: 24px;
+  background-color: var(--cl-secondary);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--cl-black);
+  border-radius: 20px;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 1024px) {
   .header-icon-menu {
     display: block;
@@ -434,5 +485,18 @@ p.popup-redirect {
   }
   .popup-wrapper form input, .popup-wrapper form select {
     margin-bottom: 8px;
+  }
+  .popup-logo img {
+    width: 97px;
+  }
+  .popup-game .popup-inner {
+    padding-top: 20px;
+  }
+  .popup-game h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .popup-game .popup-inner {
+    min-height: auto;
   }
 }

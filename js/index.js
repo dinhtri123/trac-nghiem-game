@@ -62,7 +62,43 @@ document.addEventListener("DOMContentLoaded", function () {
           popupSuc.classList.add('active')
         }, 4000)
       })
+      let dataGif = "but-ong";
+      switch (dataGif) {
+        case "gau":
+          return gif.classList.add('gau');
+          break;
+        case "bam-xanh":
+          return gif.classList.add("bam-xanh");
+          break;
+        case "sach":
+          return gif.classList.add('sach');
+          break;
+        case "bam-hong":
+          return gif.classList.add('bam-hong');
+          break;
+        case "tui":
+          return gif.classList.add('tui');
+          break;
+        case "but-ong":
+          return gif.classList.add('but-ong');
+          break;
+        case "quat":
+          return gif.classList.add('quat');
+          break;
+        case "du":
+          return gif.classList.add('du');
+          break;
+        case "but-bi":
+          return gif.classList.add('but-bi');
+          break;
+        case "chuc-may-man":
+          return gif.classList.add("chuc-may-man");
+          break;
+        default:
+          return gif.classList.add("");
+      }
     }
+    
 
     // profile
     const media = window.matchMedia("(min-width: 769px)");

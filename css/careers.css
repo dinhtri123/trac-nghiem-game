@@ -214,10 +214,23 @@
   );
   padding: 50px 0px;
 }
+.excercise-inner {
+  margin-top: -20px;
+}
+.excercise-top-wrapper {
+  position: sticky;
+  top: 0;
+  background: #f26f21;
+  max-width: 100%;
+}
+.excercise-top {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .excercise-inner .careers-title {
   margin-bottom: 20px;
 }
-.excercise-inner > p {
+.excercise-top > p {
   color: var(--cl-white);
   font-size: 24px;
   line-height: 32px;

@@ -41,9 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // get link game
     const btnGame = Array.from(document.querySelectorAll(".game-item a"));
     const btnPopupGame = document.querySelector(".popup-btn-game");
+     const popupGame = document.querySelector(".popup-game");
     btnGame.map(item => {
       item.addEventListener('click', function() {
-        btnPopupGame.href = item.href
+        btnPopupGame.href = item.href;
+        popupGame.classList.add('active')
       })
     })
     // check login

@@ -38,6 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const homePage = document.querySelector(".homepage");
   if (homePage) {
+    // get link game
+    const btnGame = Array.from(document.querySelectorAll(".game-item a"));
+    const btnPopupGame = document.querySelector(".popup-btn-game");
+    btnGame.map(item => {
+      item.addEventListener('click', function() {
+        btnPopupGame.href = item.href
+      })
+    })
     // check login
     const headerBtn = document.querySelector(".header-btn");
     const notLogged = Array.from(document.querySelectorAll(".not-logged"));
@@ -144,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const careers = document.querySelector(".careers");
   if (careers) {
     const btnMore = Array.from(document.querySelectorAll(".btn-more button"));
-
     btnMore.map((item) => {
       item.addEventListener("click", function () {
         const exploreItemContent = item.parentNode.parentNode;

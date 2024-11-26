@@ -54,6 +54,7 @@
     background-color: var(--cl-white);
     border-radius: 16px;
     overflow-y: auto;
+    padding-bottom: 240px;
 }
 .brochure-content .file.active {
     max-width: 100%;
@@ -73,7 +74,14 @@
     align-items: center;
     justify-content: center;
 }
-
+.brochure-item {
+    position: relative;
+}
+.brochure-item-image {
+position: absolute;
+right: 42px;
+bottom: 10px;
+}
 @media screen and (max-width: 768px) {
     .brochure-logo {
         width: 130px;

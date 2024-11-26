@@ -822,8 +822,8 @@
   }
   #lucky .lucky-gif {
     right: 0;
-    bottom: -60px;
-    transform: translateY(95px) scale(0.6);
+    bottom: -50px;
+    transform: translateY(95px) scale(0.7);
   }
   .stroke-clone {
     -webkit-text-stroke: 2.5px var(--cl-primary);

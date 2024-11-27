@@ -844,4 +844,7 @@
     position: relative;
     bottom: -50px;
   }
+  #home {
+    background-image:url('../images/bg-sm.png');
+  }
 }

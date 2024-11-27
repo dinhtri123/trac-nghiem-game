@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnPopupGame = document.querySelector(".popup-btn-game");
      const popupGame = document.querySelector(".popup-game");
     btnGame.map(item => {
-      item.addEventListener('click', function() {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
         btnPopupGame.href = item.href;
         popupGame.classList.add('active')
       })

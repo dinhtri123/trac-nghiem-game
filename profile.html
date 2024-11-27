@@ -151,6 +151,31 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="test-inner">
+                                    <div class="test-inner-img">
+                                        <img src="./images/test-image1.png" class="md" alt="">
+                                        <img src="./images/test-image2.png" class="md" alt="">
+                                        <img src="./images/test-image1-sm.png" class="sm" alt="">
+                                        <h4 class="sm">ISTJ - Người trách nhiệm</h4>
+                                        <p class="sm">Người tổ chức có trách nhiệm, biết sắp xếp tập thể</p>
+                                    </div>
+                                    <h3>Bạn phù hợp với chuyên ngành</h3>
+                                    <div class="test-inner-desc">
+                                        <div class="test-desc-item">
+                                            <p>1. Phát triển phần mềm</p>
+                                            <p>2. Lập trình web</p>
+                                            <p>3. Lập trình mobile</p>
+                                            <p>4. Lập trình game</p>
+                                        </div>
+                                        <div class="test-desc-item">
+                                            <p>5. Ứng dụng phần mề<m></m></p>
+                                            <p>6. Xử lý dữ liệu</p>
+                                            <p>7. Quản trị kinh doanh</p>
+                                        </div>
+                                    </div>
+                                    <div class="desc-more"><span  onclick="handleClickMore()">Xem thêm</span></div>
+                                    <button>Kết quả của bạn tại đây</button>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -420,6 +445,34 @@
         </div>
     </div>
     <script src="./js/index.js"></script>
+    <script>
+        function handleClickMore() {
+            const mediaProfile = window.matchMedia("(min-width: 769px)");
+            if(mediaProfile.matches) {
+                console.log(1)
+                const testDescContent = document.querySelector(".profile-content .test-inner-desc");
+                console.log("🚀 ~ handleClickMore ~ testDescContent:", testDescContent)
+                const btnTestMore = document.querySelector(".profile-content .desc-more span");
+                handle(testDescContent, btnTestMore)
+            }else {
+                console.log(2)
+                const testDescContent = document.querySelector(".navbar li .test-inner-desc");
+                console.log("🚀 ~ handleClickMore ~ testDescContent:", testDescContent)
+                const btnTestMore = document.querySelector(".navbar li .desc-more span");
+                handle(testDescContent, btnTestMore)
+            }
+            function handle(testDescContent, btnTestMore) {
+                if (testDescContent.classList.contains("active")) {
+                    testDescContent.classList.remove("active");
+                    btnTestMore.textContent = "Xem thêm";
+                } else {
+                    testDescContent.classList.add("active");
+                    btnTestMore.textContent = "Thu gọn";
+                }
+            }
+            
+        }
+    </script>
 </body>
 
 </html>

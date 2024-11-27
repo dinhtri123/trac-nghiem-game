@@ -126,6 +126,75 @@ p.profile-item-desc {
 .profile-item table tbody tr:last-child td {
     border-bottom: 0px;
 }
+.test-inner {
+    background-color: #FFEBDF;
+    border: 1px solid #F27125;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 24px;
+}
+.test-inner-img {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.test-inner h3 {
+    margin-top: 22px;
+    color: var(--cl-primary);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.test-inner-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    max-height: 0px;
+}
+.test-inner-desc.active {
+    max-height: 100%;
+}
+.test-desc-item p {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.desc-more {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.desc-more span {
+    color: var(--cl-primary);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.test-inner button {
+    max-width: 240px;
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color:  var(--cl-primary);
+    color: var(--cl-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0px auto;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
     .profile-inner {
         flex-direction: column;
@@ -232,5 +301,42 @@ p.profile-item-desc {
         padding: 13px 5px;
         font-size: 15px;
         line-height: 22px;
+    }
+    .test-inner-img {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .test-inner-img h4 {
+        justify-content: center;
+        text-align: center;
+    }
+    .test-inner-img p {
+        padding: 0 15px;
+    }
+    .test-inner {
+        border: none;
+        background:var(--cl-white);
+        padding: 0;
+    }
+    .test-inner h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .test-inner  {
+        padding-bottom: 20px;
+        border-radius: 8px;
+    }
+    .desc-more span {
+        font-size: 16px;
+    }
+    .test-inner-desc {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0px 15px;
+    }
+    .test-desc-item p {
+        font-size: 16px;
+        line-height: 20px;
     }
 }

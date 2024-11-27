@@ -153,9 +153,9 @@
                                 </table>
                                 <div class="test-inner">
                                     <div class="test-inner-img">
-                                        <img src="./images/test-image1.png" class="md" alt="">
-                                        <img src="./images/test-image2.png" class="md" alt="">
-                                        <img src="./images/test-image1-sm.png" class="sm" alt="">
+                                        <img src="./images/pro1.svg" class="md" alt="">
+                                        <img src="./images/pro1-1.svg" class="md" alt="">
+                                        <img src="./images/pro1sm.svg" class="sm" alt="">
                                         <h4 class="sm">ISTJ - Người trách nhiệm</h4>
                                         <p class="sm">Người tổ chức có trách nhiệm, biết sắp xếp tập thể</p>
                                     </div>
@@ -449,15 +449,11 @@
         function handleClickMore() {
             const mediaProfile = window.matchMedia("(min-width: 769px)");
             if(mediaProfile.matches) {
-                console.log(1)
                 const testDescContent = document.querySelector(".profile-content .test-inner-desc");
-                console.log("🚀 ~ handleClickMore ~ testDescContent:", testDescContent)
                 const btnTestMore = document.querySelector(".profile-content .desc-more span");
                 handle(testDescContent, btnTestMore)
             }else {
-                console.log(2)
                 const testDescContent = document.querySelector(".navbar li .test-inner-desc");
-                console.log("🚀 ~ handleClickMore ~ testDescContent:", testDescContent)
                 const btnTestMore = document.querySelector(".navbar li .desc-more span");
                 handle(testDescContent, btnTestMore)
             }

@@ -318,6 +318,7 @@ p.profile-item-desc {
         border: none;
         background:var(--cl-white);
         padding: 0;
+        overflow: hidden;
     }
     .test-inner h3 {
         font-size: 16px;
@@ -338,5 +339,8 @@ p.profile-item-desc {
     .test-desc-item p {
         font-size: 16px;
         line-height: 20px;
+    }
+    .test-inner-img img {
+        min-height: 140px;
     }
 }

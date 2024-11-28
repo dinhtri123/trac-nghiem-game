@@ -500,4 +500,7 @@ p.popup-redirect {
   .popup-game .popup-inner {
     min-height: auto;
   }
+  .popup-title p {
+    font-size: 13px;
+  }
 }

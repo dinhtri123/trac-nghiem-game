@@ -550,6 +550,8 @@
   width: 100% !important;
   max-height: 100% !important;
   height: 100%;
+  object-fit: cover;
+  object-position: 0% 0%
 }
 .popup-successfully-wrapper h3 {
   color: #ba1c2d;
@@ -830,7 +832,7 @@
   }
   .popup-successfully-wrapper {
     min-height: auto;
-    padding: 40px 10px 20px;
+    padding: 60px 10px 20px;
   }
   .popup-successfully-wrapper h3 {
     font-size: 18px;

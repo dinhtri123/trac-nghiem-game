@@ -53,7 +53,7 @@
     display: inline-block;
     background-color: var(--cl-white);
     border-radius: 16px;
-    overflow-y: auto;
+    overflow: auto !important;
     padding-bottom: 0;
 }
 .brochure-content .file.active {

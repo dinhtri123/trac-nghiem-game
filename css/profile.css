@@ -138,6 +138,10 @@ p.profile-item-desc {
     justify-content: center;
     gap: 32px;
 }
+.test-inner-img img {
+    max-width: 230px;
+    border-radius: 18px;
+}
 .test-inner h3 {
     margin-top: 22px;
     color: var(--cl-primary);
@@ -342,5 +346,7 @@ p.profile-item-desc {
     }
     .test-inner-img img {
         min-height: 140px;
+        max-width: 100%;
+        border-radius: 0px;
     }
 }

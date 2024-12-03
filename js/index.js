@@ -65,49 +65,90 @@ document.addEventListener("DOMContentLoaded", function () {
     const lucky = document.querySelector("#lucky");
     const popupSuc = document.querySelector(".popup-successfully");
     if (lucky) {
+      // const btnSpin = document.querySelector(".gif-list-btn");
+      // const gif = document.querySelector(".gif-list-bg");
+      // btnSpin.addEventListener("click", async () => {
+      //   gif.classList.add("active");
+      //   setTimeout(() => {
+      //     popupSuc.classList.add("active");
+      //   }, 4000);
+      //   let dataGif = "chuc-may-man";
+      //   switch (dataGif) {
+      //     case "gau":
+      //       return gif.classList.add("gau");
+      //       break;
+      //     case "bam-xanh":
+      //       return gif.classList.add("bam-xanh");
+      //       break;
+      //     case "sach":
+      //       return gif.classList.add("sach");
+      //       break;
+      //     case "bam-hong":
+      //       return gif.classList.add("bam-hong");
+      //       break;
+      //     case "tui":
+      //       return gif.classList.add("tui");
+      //       break;
+      //     case "but-ong":
+      //       return gif.classList.add("but-ong");
+      //       break;
+      //     case "quat":
+      //       return gif.classList.add("quat");
+      //       break;
+      //     case "du":
+      //       return gif.classList.add("du");
+      //       break;
+      //     case "but-bi":
+      //       return gif.classList.add("but-bi");
+      //       break;
+      //     case "chuc-may-man":
+      //       return gif.classList.add("chuc-may-man");
+      //       break;
+      //     default:
+      //       return gif.classList.add("");
+      //   }
+        
+      // })
+
       const btnSpin = document.querySelector(".gif-list-btn");
-      const gif = document.querySelector(".gif-list-bg");
-      btnSpin.addEventListener("click", function () {
-        gif.classList.add("active");
-        setTimeout(() => {
-          popupSuc.classList.add('active')
-        }, 4000)
-      })
-      let dataGif = "but-ong";
-      switch (dataGif) {
-        case "gau":
-          return gif.classList.add('gau');
-          break;
-        case "bam-xanh":
-          return gif.classList.add("bam-xanh");
-          break;
-        case "sach":
-          return gif.classList.add('sach');
-          break;
-        case "bam-hong":
-          return gif.classList.add('bam-hong');
-          break;
-        case "tui":
-          return gif.classList.add('tui');
-          break;
-        case "but-ong":
-          return gif.classList.add('but-ong');
-          break;
-        case "quat":
-          return gif.classList.add('quat');
-          break;
-        case "du":
-          return gif.classList.add('du');
-          break;
-        case "but-bi":
-          return gif.classList.add('but-bi');
-          break;
-        case "chuc-may-man":
-          return gif.classList.add("chuc-may-man");
-          break;
-        default:
-          return gif.classList.add("");
+      const gif = document.querySelector(".gif-list-bg img");
+
+
+      function fetchGif() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const data = "chuc-may-man"
+            resolve(data);
+          }, 1000);
+        });
       }
+      const dataGif = {
+        "gau": 360,
+        "bam-xanh": 685,
+        "sach": 650,
+        "bam-hong": 610,
+        "tui" : 575,
+        "but-ong": 540,
+        "quat": 465,
+        "du": 430,
+        "but-bi": 395,
+        "chuc-may-man": 500,
+      };
+
+      btnSpin.addEventListener("click", async () => {
+        const resultFetchGif = await fetchGif();
+        const result = dataGif[resultFetchGif];
+
+        const rotate = 360 * 1 + result;
+
+        gif.style.transition = "transform 4s cubic-bezier(0.25, 1, 0.5, 1)";
+        gif.style.transform = `rotate(${rotate}deg)`;
+
+        setTimeout(() => {
+          popupSuc.classList.add("active");
+        }, 4000);
+      });
+
     }
     
 

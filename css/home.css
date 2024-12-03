@@ -383,7 +383,8 @@
   cursor: pointer;
   z-index: 10;
 }
-.gif-list .gif-list-bg.active.gau img {
+
+/* .gif-list .gif-list-bg.active.gau img {
   animation: vongquay 4s ease;
   transform: rotate(360deg);
 }
@@ -502,7 +503,7 @@
   100% {
     transform: rotate(685deg);
   }
-}
+} */
 .gif-list {
   z-index: 10;
 }

@@ -65,51 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const lucky = document.querySelector("#lucky");
     const popupSuc = document.querySelector(".popup-successfully");
     if (lucky) {
-      // const btnSpin = document.querySelector(".gif-list-btn");
-      // const gif = document.querySelector(".gif-list-bg");
-      // btnSpin.addEventListener("click", async () => {
-      //   gif.classList.add("active");
-      //   setTimeout(() => {
-      //     popupSuc.classList.add("active");
-      //   }, 4000);
-      //   let dataGif = "chuc-may-man";
-      //   switch (dataGif) {
-      //     case "gau":
-      //       return gif.classList.add("gau");
-      //       break;
-      //     case "bam-xanh":
-      //       return gif.classList.add("bam-xanh");
-      //       break;
-      //     case "sach":
-      //       return gif.classList.add("sach");
-      //       break;
-      //     case "bam-hong":
-      //       return gif.classList.add("bam-hong");
-      //       break;
-      //     case "tui":
-      //       return gif.classList.add("tui");
-      //       break;
-      //     case "but-ong":
-      //       return gif.classList.add("but-ong");
-      //       break;
-      //     case "quat":
-      //       return gif.classList.add("quat");
-      //       break;
-      //     case "du":
-      //       return gif.classList.add("du");
-      //       break;
-      //     case "but-bi":
-      //       return gif.classList.add("but-bi");
-      //       break;
-      //     case "chuc-may-man":
-      //       return gif.classList.add("chuc-may-man");
-      //       break;
-      //     default:
-      //       return gif.classList.add("");
-      //   }
-        
-      // })
-
       const btnSpin = document.querySelector(".gif-list-btn");
       const gif = document.querySelector(".gif-list-bg img");
 
@@ -179,6 +134,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         });
+        // reset password
+        const showPass = Array.from(document.querySelectorAll(".showpass"));
+        showPass.map(item => {
+          item.addEventListener("click", function() {
+            const input = item.parentNode.querySelector("input")
+            if(item.classList.contains('active')) {
+              item.classList.remove('active')
+              item.innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
+              input.type = "password";
+            }else {
+              item.innerHTML = '<i class="fa-regular fa-eye"></i>';
+              item.classList.add('active');
+              input.type = "text"
+            }
+          })
+        })
       } else {
         navbarItem.map((item, i, arr) => {
           item.addEventListener("click", function () {
@@ -259,4 +230,5 @@ document.addEventListener("DOMContentLoaded", function () {
       progressBg.style.width = `${percentage * 2}%`;
     }
   }
+
 });

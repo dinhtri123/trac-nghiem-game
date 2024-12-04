@@ -37,9 +37,16 @@
                             </ul>
                         </nav>
                         <div class="header-btn header-btn-action">
-                            <button class="btn-login">đăng nhập</button>
-                            <button class="btn-register">đăng ký</button>
-                            <span class="header-account hidden"><img src="./images/icon_account.svg" alt=""></span>
+                            <button class="btn-login hidden">đăng nhập</button>
+                            <button class="btn-register hidden">đăng ký</button>
+                            <div class="header-account">
+                                <img src="./images/icon_account.svg" alt="">
+                                <div class="header-account-inner">
+                                    <a href="#">Đổi avatar</a>
+                                    <a href="/profile.html">Đổi mật khẩu</a>
+                                    <a href="#">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,16 +127,7 @@
                         <img src="./images/test-img.svg" alt="">
                     </span>
                     <h3>
-                        KHÁM PHÁ SỞ THÍCH<br><strong>NGHỀ NGHIỆP</strong>
-                    </h3>
-                    <a href="#" class="not-logged"><button>LÀM TRẮC NGHIỆM NGAY</button></a>
-                </div>
-                <div class="test-item" data-aos="fade-left">
-                    <span class="test-img">
-                        <img src="./images/test-img2.svg" alt="">
-                    </span>
-                    <h3>
-                        KHÁM PHÁ SỞ THÍCH,<br><strong>TÍCH CÁCH</strong>
+                        KHÁM PHÁ SỞ THÍCH<br><strong>NGHỀ NGHIỆP, SỞ THÍCH</strong>
                     </h3>
                     <a href="#" class="not-logged"><button>LÀM TRẮC NGHIỆM NGAY</button></a>
                 </div>
@@ -146,6 +144,11 @@
                                 <div class="game-item">
                                     <img src="./images/box-img.svg" alt="" class="md">
                                     <img src="./images/box-img-mb.svg" alt="" class="sm">
+                                    <div class="game-item-btn">
+                                        <a href="#">KIẾN TẠO ONG VÀNG</a>
+                                        <a href="#">CÙNG ONG VÀNG CHINH PHỤC OLYMBEE</a>
+                                        <a href="#">HỎI XOAY ĐÁP XOÁY</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -212,7 +215,7 @@
                                 <img src="./images/QUAY.png" alt="">
                             </span>
                             <span class="gif-list-bg">
-                                <img src="./images/lucky-bg.svg" alt="">
+                                <img src="./images/lucky-bg.png" alt="">
                             </span>
                         </div>
                         <span class="gif-bottom">
@@ -413,12 +416,14 @@
                 <img src="./images/popup-success.png" class="md" alt="">
                 <img src="./images/popup-success-sm.svg" class="sm" alt="">
             </span>
-            <h3>Chúc mừng bạn ĐÃ TRÚNG <br class="sm"><span>GẤU</span> POLYTECHNIC <br class="sm">
-            TỪ VÒNG XOAY MAY MẮN CỦA FPT POLYTECHNIC</h3>
+            <h3>Chúc mừng bạn ĐÃ TRÚNG <br class="sm"><span>GẤU</span>POLYTECHNIC</h3>
             <span class="img">
                 <img src="./images/gif1.png" alt="">
             </span>
-            <p>*Note: Hãy điền đầy đủ thông tin FPT POLYTECHNIC gửi quà tận tay cho bạn nha!!!</p>
+            <p>Thông tin trúng quà của bạn đã được ghi nhận!<br>
+            Bộ phận CSKH sẽ liên hệ xác nhận thông tin 24h tới. Bạn sẽ nhận được quà từ 5 - 7 sau khi nhận xác nhận từ FPT
+            Polytechnic.</p>
+            <a href="#" class="popup-successfully-btn"><button>THÔNG TIN QUÀ TẶNG</button></a>
         </div>
     </div>
     <div class="popup popup-register">
@@ -428,8 +433,8 @@
             </span>
             <div class="popup-wrapper">
                 <div class="popup-title">
-                    <h3>CHÀO MỪNG BẠN ĐẾN VỚI<br class="sm"> FPT POLYTECHNIC</h3>
-                    <p>Vui lòng nhập thông tin để được tư vấn sớm nhất</p>
+                    <h3>CHÀO MỪNG BẠN ĐẾN VỚI HỆ SINH THÁI FPT POLYTECHNIC </h3>
+                    <p>Vui lòng nhập thông tin chính xác để có OTP và nhận quà</p>
                 </div>
                 <form action="">
                     <input type="text" name="name" id="name" placeholder="Họ và tên">
@@ -443,10 +448,9 @@
                     </select>
                     <input type="text" name="address" id="address" placeholder="Địa chỉ chi tiết">
                 </form>
-                <p>*Ghi chú: Hãy trải nghiệm thật nhiều tính năng để dành các phần quà hấp dẫn từ FPT Polytechnic bạn
-                    nhé!</p>
+                <p>Ghi chú: Quà tặng trong hệ sinh thái của FPT Polytechnic là không giới hạn và vô cùng hấp dẫn. Bạn đừng bỏ lỡ!</p>
                 <button type="submit">ĐĂNG KÝ TÀI KHOẢN</button>
-                <p class="btn-login popup-redirect">Bạn đã có tài khoản? Đăng nhập ngay</p>
+                <p class="btn-login popup-redirect">Bạn đã có tài khoản? <b>Đăng nhập ngay</b></p>
             </div>
         </div>
     </div>
@@ -457,17 +461,15 @@
             </span>
             <div class="popup-wrapper">
                 <div class="popup-title">
-                    <h3>CHÀO MỪNG BẠN ĐẾN VỚI<br class="sm"> FPT POLYTECHNIC</h3>
-                    <p>Vui lòng nhập thông tin để được tư vấn sớm nhất</p>
+                    <h3>CHÀO MỪNG BẠN ĐẾN VỚI HỆ SINH THÁI CỦA FPT POLYTECHNIC</h3>
+                    <p>Bạn sẽ có cơ hội dành nhiều phần quà hấp dẫn và vô số thông tin hữu ích khi trải nghiệm tại đây</p>
                 </div>
                 <form action="">
                     <input type="text" name="name" id="name" placeholder="Họ và tên">
                     <input type="tel" id="phone" name="phone" placeholder="Số điện thoại">
                 </form>
-                <p>*Ghi chú: Hãy trải nghiệm thật nhiều tính năng để dành các phần quà hấp dẫn từ FPT Polytechnic bạn
-                    nhé!</p>
                 <button type="submit">ĐĂNG NHẬP TÀI KHOẢN</button>
-                <p class="btn-register popup-redirect">Bạn chưa có tài khoản? Đăng ký ngay</p>
+                <p class="btn-register popup-redirect">Bạn chưa có tài khoản? <b>Đăng ký ngay</b></p>
             </div>
         </div>
     </div>
@@ -479,9 +481,10 @@
     <script>
         var swiper = new Swiper(".game-swiper", {
             autoplay: {
-                delay: 2500,
+                delay: 4000,
                 disableOnInteraction: false,
             },
+            spaceBetween: 20,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

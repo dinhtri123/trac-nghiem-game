@@ -111,6 +111,10 @@ header {
   font-weight: 700;
   line-height: 23px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header-btn button.btn-login:hover {
+  color: var(--cl-primary)
 }
 .header-btn button.btn-register {
   background-color: var(--cl-primary);
@@ -126,7 +130,35 @@ header {
 #header-careers .header-menu-inner {
   justify-content: center;
 }
-
+.header-account {
+  position: relative;
+}
+.header-account img{
+  cursor: pointer;
+} 
+.header-account-inner {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background-color: var(--cl-white);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: none;  
+}
+.header-account:hover .header-account-inner {
+  display: block;
+}
+.header-account-inner a {
+  padding: 10px 20px;
+  color: var(--cl-black);
+  display: flex;
+  transition: all 0.3s ease;
+}
+.header-account-inner a:hover {
+  background-color: #eee;
+}
 /* footer */
 footer {
   background-color: #1a2042;
@@ -226,12 +258,14 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  padding: 20px;
+  overflow-y: auto;
 }
 .popup.active {
   opacity: 1;
@@ -244,10 +278,6 @@ footer {
   padding-top: 40px;
   border-radius: 24px;
   background-color: var(--cl-primary);
-}
-.popup-wrapper {
-  overflow-y: auto;
-  max-height: 90vh;
 }
 
 .popup-btn-close {
@@ -281,6 +311,7 @@ footer {
   margin-bottom: 24px;
 }
 .popup-title h3 {
+  padding: 0px 10px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 900;
@@ -324,11 +355,16 @@ footer {
   font-weight: 500;
   font-style: italic;
   color: var(--cl-white);
-  margin-bottom: 14px;
 }
 p.popup-redirect {
   margin-bottom: 0px;
+}
+.popup-redirect b {
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.popup-redirect b:hover {
+  color: var(--cl-black)
 }
 .popup-wrapper button {
   width: 100%;
@@ -339,6 +375,7 @@ p.popup-redirect {
   border-radius: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 14px;
 }
 
 
@@ -502,5 +539,8 @@ p.popup-redirect {
   }
   .popup-title p {
     font-size: 13px;
+  }
+  .header-menu-list ul li a, .header-btn button {
+    font-size: 16px;
   }
 }

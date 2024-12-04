@@ -56,8 +56,11 @@
     overflow: auto !important;
     padding-bottom: 0;
 }
+
 .brochure-content .file.active {
     max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .brochure-item-list li a {
     margin-bottom: 20px;
@@ -109,5 +112,9 @@
     }
     .brochure {
         background-size: cover;
+        background-position: top;
+    }
+    .brochure-content .file.active {
+        grid-template-columns: 1fr;
     }
 }

@@ -36,7 +36,14 @@
                         <div class="header-btn">
                             <button class="btn-login hidden">đăng nhập</button>
                             <button class="btn-register hidden">đăng ký</button>
-                            <span class="header-account"><img src="./images/icon_account.svg" alt=""></span>
+                            <div class="header-account">
+                                <img src="./images/icon_account.svg" alt="">
+                                <div class="header-account-inner">
+                                    <a href="#">Đổi avatar</a>
+                                    <a href="/profile.html">Đổi mật khẩu</a>
+                                    <a href="#">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,6 +97,30 @@
                                         <span>Địa chỉ</span>
                                         <span>VA03A-13 Hoàng Thành Villas, phường Mỗ Lao, quận Hà Đông, Hà Nội</span>
                                     </div>
+                                </div>
+                                <div class="profile-password">
+                                    <h3>Đổi mật khẩu</h3>
+                                    <form action="">
+                                        <div>
+                                            <input type="password" name="password-old" id="password-old" placeholder="Mật khẩu hiện tại">
+                                            <span class="showpass">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <input type="password" name="password-new" id="password-new" placeholder="Mật khẩu mới">
+                                            <span  class="showpass">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <input type="password" name="password-ver" id="password-ver" placeholder="Xác nhận lại mật khẩu">
+                                            <span  class="showpass">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </span>
+                                        </div>
+                                        <button type="submit">Đổi mật khẩu</button>
+                                    </form>
                                 </div>
                             </div>
                         </li>

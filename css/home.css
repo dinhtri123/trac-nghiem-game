@@ -267,26 +267,31 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin: 32px auto 0px;
+  max-width: 90%;
+}
+.game-item-btn a:nth-child(2) {
+  flex: 1;
 }
 .game-item-btn a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 20px;
-  border-radius: 8px;
+  border-radius: 24px;
   font-size: 16px;
   font-weight: 600;
-  background-color: var(--cl-primary);
-  color: var(--cl-white);
-  min-width: 200px;
+  background-color: var(--cl-secondary);
+  color: var(--cl-black);
+  min-width: 30%;
   text-align: center;
   min-height: 50px;
 }
 .game-swiper .swiper-slide:nth-child(1) .game-item img {
   width: 100%;
+  max-height: 100%;
   object-position: top;
   border-radius: 24px;
-  max-height: 90%;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -808,6 +813,8 @@
   .game-item-btn {
     flex-direction: column;
     gap: 10px;
+    max-width: 100%;
+    margin-top: 10px;
   }
   .game-item-btn a {
     font-size: 14px;

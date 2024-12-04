@@ -658,6 +658,10 @@ p.popup-redirect {
   .three-game h3 {
     font-size: 19px;
   }
+  .three-game-btn {
+    flex-direction: column;
+    gap: 16px;
+  }
   .three-game p {
     font-size: 14px;
     line-height: 18px;

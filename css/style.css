@@ -283,7 +283,10 @@ footer {
   padding: 0;
   max-width: 720px;
   background: transparent;
-  overflow: hidden;
+}
+.popup-login-img {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 .popup-login .popup-title {
   margin-bottom: 32px;

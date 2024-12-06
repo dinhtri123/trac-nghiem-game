@@ -837,7 +837,7 @@
 	height: auto;
 }
 }
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 568px) {
   .game-item-content h3 {
     font-size: 24px;
     line-height: 32px;
@@ -854,12 +854,12 @@
 }
 @media screen and (max-width: 399px) {
   .game-item-content h3 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 30px;
   }
   .game-item-content p {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 24px;
   }
   .game-item-content button {
     font-size: 16px;

@@ -304,8 +304,33 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+                <div class="careers-banner-slider">
+                    <h2 class="careers-title">
+                        4 nhóm ngành nghề nghiệp Holland
+                    </h2>
+                    <div class="swiper careers-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/banner1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/banner2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/banner3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/banner4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </main>
     <footer>
         <div class="container">
@@ -485,6 +510,18 @@
                     spaceBetween: 30,
                 },
             },
+        });
+        var swiperCharacter = new Swiper(".careers-slider", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
         });
     </script>
     <script src="./js/index.js"></script>

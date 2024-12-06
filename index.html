@@ -133,12 +133,27 @@
                 </div>
             </div>
         </div>
+        <div class="box gif-game">
+            <div class="box-inner">
+                <p class="title">QUÀ TẶNG</p>
+                <div class="container">
+                    <div class="game-swiper">
+                        <div class="swiper-slide game-slider-banner">
+                            <a href="#game" class="game-item">
+                                <img src="./images/game-img-new.png" alt="" class="md">
+                                <img src="./images/game-img-new-sm.png" alt="" class="sm">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="box" id="game">
             <div class="box-inner">
                 <p class="title">BOX GAME</p>
                 <div class="container">
                     <!-- Swiper -->
-                    <div class="swiper mySwiper game-swiper">
+                    <div class="swiper game-swiper game-swiper-wrapper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide game-slider-banner">
                                 <div class="game-item">
@@ -155,7 +170,8 @@
                                         <a href="https://caodang.fpt.edu.vn/" class="not-logged"><button>CHƠI NGAY</button></a>
                                     </div>
                                     <div class="game-img" data-aos="fade-left">
-                                        <img src="./images/game-img.png" alt="">
+                                        <img src="./images/game-img.png" class="md" alt="">
+                                        <img src="./images/game-img-sm.png" class="sm" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +184,8 @@
                                         <a href="https://caodang.fpt.edu.vn/" class="not-logged"><button>CHƠI NGAY</button></a>
                                     </div>
                                     <div class="game-img" data-aos="fade-left">
-                                        <img src="./images/game-img2.png" alt="">
+                                        <img src="./images/game-img2.png" class="md" alt="">
+                                        <img src="./images/game-img2-sm.png" class="sm" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -181,7 +198,8 @@
                                         <a href="https://caodang.fpt.edu.vn/" class="not-logged"><button>CHƠI NGAY</button></a>
                                     </div>
                                     <div class="game-img" data-aos="fade-left">
-                                        <img src="./images/game-img3.png" alt="">
+                                        <img src="./images/game-img3.png" class="md" alt="">
+                                        <img src="./images/game-img3-sm.png" class="sm" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -194,21 +212,6 @@
                         <a href="#">KIẾN TẠO ONG VÀNG</a>
                         <a href="#">CÙNG ONG VÀNG CHINH PHỤC OLYMBEE</a>
                         <a href="#">HỎI XOAY ĐÁP XOÁY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box gif-game" >
-            <div class="box-inner">
-                <p class="title">QUÀ TẶNG</p>
-                <div class="container">
-                    <div class="game-swiper">
-                        <div class="swiper-slide game-slider-banner">
-                            <div class="game-item">
-                                <img src="./images/game-img-new.png" alt="" class="md">
-                                <img src="./images/game-img-new-sm.png" alt="" class="sm">
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -422,26 +425,6 @@
             <a href="#" class="popup-btn-game"><button>CHƠI NGAY</button></a>
         </div>
     </div>
-    <div class="popup-game popup three-game">
-        <div class="popup-inner">
-            <span class="popup-btn-close">
-                <i class="fa-solid fa-xmark"></i>
-            </span>
-            <span class="bg">
-                <img src="./images/three-game.png" class="md" alt="">
-                <img src="./images/three-game-sm.png" class="sm" alt="">
-            </span>
-            <h3>TADA!! <br class="sm"> BẠN ĐÃ HOÀN THÀNH 3 GAME</h3>
-            <p>Hãy duy trì đạt TOP để nhận được vô vàn phần quà thú vị và giá trị từ FPT Polytechnic</p>
-            <span class="img">
-                <img src="./images/three-game-img.png" alt="">
-            </span>
-            <div class="three-game-btn">
-                <a href="#" class="popup-btn-game"><button>OK, HIỂU RỒI NÈ</button></a>
-                <a href="#" class="popup-btn-game"><button>TRANG CHỦ</button></a>
-            </div>
-        </div>
-    </div>
     <div class="popup-successfully popup">
         <div class="popup-successfully-wrapper">
             <span class="popup-btn-close">
@@ -515,7 +498,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".game-swiper", {
+        var swiper = new Swiper(".game-swiper-wrapper", {
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,

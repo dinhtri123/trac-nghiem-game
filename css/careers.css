@@ -588,6 +588,21 @@
 .popup-careers .popup-btn-close i {
   color: var(--cl-primary);
 }
+.careers-banner-slider {
+  margin-top: 50px;
+}
+.careers-banner-slider .swiper-slide {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.careers-banner-slider .swiper-wrapper {
+  padding-bottom: 20px;
+}
+.careers-banner-slider .swiper-pagination {
+  bottom: 0px;
+}
+
+
 @media screen and (min-width: 769px) {
   .swiper-slide.character-item {
     margin-top: 0 !important;
@@ -931,5 +946,11 @@
   }
   .popup-careers-text {
     text-align: center;
+  }
+  .careers-banner-slider .swiper-button-next, .careers-banner-slider .swiper-button-prev {
+    display: none;
+  }
+  .careers-banner-slider .swiper-pagination {
+    bottom: 0px;
   }
 }

@@ -426,10 +426,30 @@ p.popup-redirect {
 .popup-register .popup-inner {
   max-width: 720px;
 }
-
+/* voucher popup */
+.popup.voucher-popup h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.popup.voucher-popup p {
+  color: var(--cl-white);
+  text-align: left;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+.popup.voucher-popup.voucher-info .popup-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup.voucher-popup.voucher-info .img {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
 /* popup-game */
 .popup-game .popup-inner {
-  min-height: 565px;
   background-color: transparent;
 }
 .popup-game .bg {
@@ -676,5 +696,22 @@ p.popup-redirect {
     flex-direction: column;
     gap: 16px;
   }
-  
+  /* --voucher */
+  .popup.voucher-popup h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .popup.three-game.voucher-popup .popup-inner .img {
+    margin: 10px 0px;
+
+  }
+  .popup.three-game.voucher-popup .popup-inner {
+    padding-top: 70px;
+  }
+  .popup.voucher-popup p {
+    margin-bottom: 10px;
+  }
+  .popup.voucher-popup .three-game-btn {
+    gap: 8px;
+  }
 }

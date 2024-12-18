@@ -1,0 +1,140 @@
+#gpcns .mmt-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+#gpcns .mmt-app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 56px;
+  transition: all 0.24s;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  background-color: rgb(0, 174, 239);
+}
+#gpcns .mmt-menu__item {
+    pointer-events: auto;
+    display: flex;
+}
+.mt-tooltip {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#gpcns .mmt-button {
+    background-color: hsla(0, 0%, 100%, .2);
+}
+#gpcns .mmt-button {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 10px;
+    flex-direction: row;
+    cursor: pointer;
+    position: relative;
+    justify-content: flex-start;
+    border-radius: 3px;
+    min-height: 40px;
+    margin: 10px 5px;
+    width: 100%;
+}
+#gpcns .mmt-button__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+#gpcns .mmt-button__label {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+.mt-tooltip__text {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    background: #232f34;
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 120px;
+    max-width: 240px;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.mt-tooltip__text:after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #232f34;
+}
+#gpcns .mmt-button:hover {
+    background-color: rgba(27, 27, 27, .2);
+}
+.mt-tooltip:hover .mt-tooltip__text {
+    visibility: visible;
+}
+#gpcns .mmt-button__icon--motion {
+    animation: tada 1.2s infinite;
+}
+@keyframes tada {
+  0% {
+      transform: scaleX(1);
+  }
+  10%, 20% {
+      transform: scale3d(.9, .9, .9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+      transform: scale3d(1.3, 1.3, 1.3) rotate(3deg);
+  }
+  40%, 60%, 80% {
+      transform: scale3d(1.3, 1.3, 1.3) rotate(-3deg);
+  }
+  100% {
+      transform: scaleX(1);
+}
+}
+@media screen and (max-width: 768px){
+  #gpcns .mmt-button {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    padding:6px 10px;
+    border-left: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 0px;
+    height: 100%;
+  }
+  #gpcns .mmt-button__label {
+    text-align: center;
+    font-size: 12px;
+      line-height: 13px;
+  }
+  #gpcns .mmt-button__icon {
+    margin-bottom: 4px;
+    margin-right: 0px;
+  }
+  #gpcns .mmt-menu__item {
+    flex: 1 1;
+    justify-content: center;
+  }
+  .mt-tooltip__text {
+    display: none;
+  }
+}

@@ -438,6 +438,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -456,6 +457,7 @@
   padding: 20px;
   padding-top: 80px;
   min-height: 760px;
+  margin: 0px auto;
 }
 .popup-successfully-wrapper .bg {
   position: absolute;

@@ -38,6 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const homePage = document.querySelector(".homepage");
   if (homePage) {
+    // voucher  
+    const voucherBtn = document.querySelector(".voucher-btn");
+    const voucherPopup = document.querySelector(".voucher-before");
+    const voucherInfo = document.querySelector(".voucher-info");
+    voucherBtn.addEventListener('click', function() {
+      voucherInfo.classList.add('active')
+      voucherPopup.classList.remove('active')
+    })
     // get link game
     const btnGame = Array.from(document.querySelectorAll(".game-item a"));
     const btnPopupGame = document.querySelector(".popup-btn-game");

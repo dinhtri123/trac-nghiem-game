@@ -13,17 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // popup
   const popupRegister = document.querySelector(".popup-register");
   const popupLogin = document.querySelector(".popup-login");
-  const btnClose = Array.from(
-    document.querySelectorAll(".popup-btn-close")
-  );
+  const btnClose = Array.from(document.querySelectorAll(".popup-btn-close"));
   const btnRegister = Array.from(document.querySelectorAll(".btn-register"));
   const btnLogin = Array.from(document.querySelectorAll(".btn-login"));
-  btnClose.map(item => {
+  btnClose.map((item) => {
     const parentPopup = item.parentNode.parentNode;
-    item.addEventListener('click', function() {
-      parentPopup.classList.remove('active')
-    })
-  })
+    item.addEventListener("click", function () {
+      parentPopup.classList.remove("active");
+    });
+  });
   btnRegister.map((item) => {
     item.addEventListener("click", function () {
       popupRegister.classList.add("active");
@@ -38,25 +36,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const homePage = document.querySelector(".homepage");
   if (homePage) {
-    // voucher  
+    // voucher
     const voucherBtn = document.querySelector(".voucher-btn");
     const voucherPopup = document.querySelector(".voucher-before");
     const voucherInfo = document.querySelector(".voucher-info");
-    voucherBtn.addEventListener('click', function() {
-      voucherInfo.classList.add('active')
-      voucherPopup.classList.remove('active')
-    })
+    voucherBtn.addEventListener("click", function () {
+      voucherInfo.classList.add("active");
+      voucherPopup.classList.remove("active");
+    });
     // get link game
     const btnGame = Array.from(document.querySelectorAll(".game-item a"));
     const btnPopupGame = document.querySelector(".popup-btn-game");
-     const popupGame = document.querySelector(".popup-game");
-    btnGame.map(item => {
-      item.addEventListener('click', function(e) {
+    const popupGame = document.querySelector(".popup-game");
+    btnGame.map((item) => {
+      item.addEventListener("click", function (e) {
         e.preventDefault();
         btnPopupGame.href = item.href;
-        popupGame.classList.add('active')
-      })
-    })
+        popupGame.classList.add("active");
+      });
+    });
     // check login
     const headerBtn = document.querySelector(".header-btn");
     const notLogged = Array.from(document.querySelectorAll(".not-logged"));
@@ -76,32 +74,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const btnSpin = document.querySelector(".gif-list-btn");
       const gif = document.querySelector(".gif-list-bg img");
 
-
       function fetchGif() {
         return new Promise((resolve) => {
           setTimeout(() => {
-            const data = "chuc-may-man"
+            const data = "bi_mat";
             resolve(data);
           }, 1000);
         });
       }
       const dataGif = {
-        "gau": 360,
-        "bam-xanh": 685,
-        "sach": 650,
-        "bam-hong": 610,
-        "tui" : 575,
-        "but-ong": 540,
-        "quat": 465,
-        "du": 430,
-        "but-bi": 395,
-        "chuc-may-man": 500,
+        gau: 0,
+        quat: 390,
+        voucher_k: 420,
+        du: 450,
+        voucher_100_1: 480,
+        chuc_may_man: 510,
+        bam_hong: 540,
+        voucher_200: 570,
+        tui: 600,
+        bi_mat: 630,
+        sach: 660,
+        voucher_100_2: 690,
       };
 
       btnSpin.addEventListener("click", async () => {
         const resultFetchGif = await fetchGif();
         const result = dataGif[resultFetchGif];
-
         const rotate = 360 * 1 + result;
 
         gif.style.transition = "transform 4s cubic-bezier(0.25, 1, 0.5, 1)";
@@ -111,9 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
           popupSuc.classList.add("active");
         }, 4000);
       });
-
     }
-    
 
     // profile
     const media = window.matchMedia("(min-width: 769px)");
@@ -144,20 +140,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         // reset password
         const showPass = Array.from(document.querySelectorAll(".showpass"));
-        showPass.map(item => {
-          item.addEventListener("click", function() {
-            const input = item.parentNode.querySelector("input")
-            if(item.classList.contains('active')) {
-              item.classList.remove('active')
+        showPass.map((item) => {
+          item.addEventListener("click", function () {
+            const input = item.parentNode.querySelector("input");
+            if (item.classList.contains("active")) {
+              item.classList.remove("active");
               item.innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
               input.type = "password";
-            }else {
+            } else {
               item.innerHTML = '<i class="fa-regular fa-eye"></i>';
-              item.classList.add('active');
-              input.type = "text"
+              item.classList.add("active");
+              input.type = "text";
             }
-          })
-        })
+          });
+        });
       } else {
         navbarItem.map((item, i, arr) => {
           item.addEventListener("click", function () {
@@ -238,5 +234,4 @@ document.addEventListener("DOMContentLoaded", function () {
       progressBg.style.width = `${percentage * 2}%`;
     }
   }
-
 });

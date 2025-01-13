@@ -120,6 +120,26 @@
                 </div>
             </div>
         </div>
+        <div class="hocbong">
+            <div class="box-inner">
+                <div class="container">
+                    <p class="title">HỌC BỔNG</p>
+                    <div class="hocbong-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/Website Banner 1.jpg" class="md" alt="">
+                                <img src="./images/Website Banner 1_sm.jpg" class="sm" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/Website Banner 2.jpg" class="md" alt="">
+                                <img src="./images/Website Banner 2_sm.jpg" class="sm" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="test-wrapper" id="test">
             <div class="test">
                 <p class="title">TRẮC NGHIỆM NGHỀ NGHIỆP</p>
@@ -552,6 +572,21 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".game-swiper-wrapper", {
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+        var swiperHocbong = new Swiper(".hocbong-slider", {
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,

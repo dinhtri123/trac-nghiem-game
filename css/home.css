@@ -26,7 +26,7 @@
   line-height: 28px;
 }
 #home {
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -801,7 +801,7 @@
     bottom: -30px;
   }
   #home {
-    background-image: url("../images/bg-sm.png");
+    background-image: url("../images/bg2-sm.png");
   }
 
   .game-swiper .swiper-slide:first-child .game-item {
@@ -877,5 +877,18 @@
   .game-item-content p {
     font-size: 15px;
     line-height: 22px;
+  }
+}
+
+.hocbong {
+  margin-bottom: 100px;
+}
+.hocbong-slider .swiper-slide img {
+  border-radius: 24px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .hocbong .box-inner {
+    padding: 40px 0px;
   }
 }
